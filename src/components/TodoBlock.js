@@ -9,9 +9,22 @@ export const TodoBlock = () => {
     "play football",
     "Messi gimere wowo"
   ]);
+
   const addTask = (task) => {
     if (task.trim()) {
       setTasks([...tasks, task]);
+    }
+  };
+
+  const deleteTask = (index) => {
+    setTasks(tasks.filter((_, i) => i !== index));
+  };
+
+  const editTask = (index, newTask) => {
+    if (newTask.trim()) {
+      const updatedTask = [...tasks];
+      updatedTask[index] = newTask;
+      setTasks(updatedTask);
     }
   };
 
@@ -19,7 +32,7 @@ export const TodoBlock = () => {
     <div className="todo-wrapper">
       <h2 className="todo-title">Get Things Done!</h2>
       <TodoForm addTask={addTask} />
-      <TodoList tasks={tasks} />
+      <TodoList tasks={tasks} deleteTask={deleteTask} editTask={editTask} />
     </div>
   );
 };
