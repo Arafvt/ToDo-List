@@ -1,0 +1,37 @@
+.todoForm {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.todoInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.todoInput::placeholder {
+  color: rgba(var(--text-color), 0.6);
+}
+
+.todoBtn {
+  padding: 10px 12px;
+  background: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.todoBtn:hover {
+  background: var(--btn-hover-bg);
+  transform: scale(1.05);
+}

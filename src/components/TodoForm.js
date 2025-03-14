@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./TodoForm.module.css"
 
 export const TodoForm = ({ addTask }) => {
   const [input, setInput] = useState("");
@@ -10,15 +11,15 @@ export const TodoForm = ({ addTask }) => {
   };
 
   return (
-    <form className="todo-form" onSubmit={handleSubmit}>
+    <form className={styles.todoForm} onSubmit={handleSubmit}>
       <input
         type="text"
-        className="todo-input"
+        className={styles.todoInput}
         placeholder="What task we do today?"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button type="submit" className="todo-btn">
+      <button type="submit" className={styles.todoBtn}>
         Add Task
       </button>
     </form>

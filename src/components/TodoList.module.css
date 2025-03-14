@@ -1,0 +1,35 @@
+
+.todoList {
+  list-style: none;
+  padding: 0;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--task-bg);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.todoText {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-color);
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.button:hover {
+  color: red;
+}

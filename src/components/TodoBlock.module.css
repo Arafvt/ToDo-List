@@ -1,0 +1,87 @@
+:root {
+  --bg-color: #0d1b2a;
+  --wrapper-bg: #1b263b;
+  --input-bg: #415a77;
+  --text-color: #ffffff;
+  --btn-bg: #778da9;
+  --btn-hover-bg: #a1c6ea;
+  --item-bg: #415a77;
+  --item-hover-bg: #526c91;
+}
+
+.light-theme {
+  --bg-color: #f7f7f7;
+  --wrapper-bg: #ffffff;
+  --input-bg: #e0e0e0;
+  --text-color: #000000;
+  --btn-bg: #1976d2;
+  --btn-hover-bg: #42a5f5;
+  --item-bg: #e0e0e0;
+  --item-hover-bg: #bdbdbd;
+}
+
+.light-theme .todo-actions button {
+  color: #000;
+}
+
+.light-theme .todo-actions button:hover {
+  color: #333;
+}
+
+.todoWrapper {
+  width: 360px;
+  background: var(--wrapper-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.todoTitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.searchFilter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.searchInput::placeholder {
+  color: rgba(var(--text-color), 0.6);
+}
+
+.searchInput:focus {
+  background: var(--item-hover-bg);
+}
+
+.filterSelect {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filterSelect:hover,
+.filterSelect:focus {
+  background: var(--item-hover-bg);
+}

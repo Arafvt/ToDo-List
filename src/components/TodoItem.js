@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./TodoItem.module.css"
 
 export const TodoItem = ({ task, index, deleteTask, editTask, toggleTaskStatus, onStartPomodoro }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -12,7 +13,7 @@ export const TodoItem = ({ task, index, deleteTask, editTask, toggleTaskStatus, 
   };
 
   return (
-    <li className="todo-item">
+    <li className={styles.todoItem}>
       <span 
         className={`status-icon ${task.status}`} 
         onClick={() => toggleTaskStatus(index)}
@@ -26,18 +27,17 @@ export const TodoItem = ({ task, index, deleteTask, editTask, toggleTaskStatus, 
           type="text"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
-          className="edit-input"
           autoFocus
         />
       ) : (
         <span onClick={() => onStartPomodoro(task)}>{task.text}</span>
       )}
 
-      <div className="todo-actions">
-        <button className="edit-btn" onClick={handleEdit}>
+      <div className={styles.todoActions}>
+        <button onClick={handleEdit}>
           {isEditing ? "sv" : "ed"}
         </button>
-        <button className="delete-btn" onClick={() => deleteTask(index)}>
+        <button onClick={() => deleteTask(index)}>
           del
         </button>
       </div>

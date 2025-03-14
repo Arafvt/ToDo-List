@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { TodoItem } from "./TodoItem";
 import { PomodoroTimer } from "./PomodoroTimer";
+import styles from "./TodoList.module.css"
 
 export const TodoList = ({ tasks, deleteTask, editTask, toggleTaskStatus }) => {
   const [selectedTask, setSelectedTask] = useState(null);
 
   return (
     <div>
-      <ul className="todo-list">
+      <ul className={styles.todoList}>
         {tasks.map((task, index) => (
           <TodoItem
             key={index}
